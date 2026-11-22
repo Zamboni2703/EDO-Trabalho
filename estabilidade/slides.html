@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Estabilidade — Projeto 2 EDO (João)</title>
+<link rel="stylesheet" href="katex/katex.min.css">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<!-- ============================================================
+     SLIDE S1 — divisor de secao (fundo azul/cinza inteiro)
+     Marca o INICIO da parte do Joao.
+     ============================================================ -->
+<section class="slide secao">
+  <div class="titulo-secao">Estabilidade</div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S2 — O que vamos responder (roteiro)
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — o que vamos responder</h1></div>
+  <div class="corpo">
+    <p>Partindo da equação não linear da massa, queremos decidir o que a professora pediu:</p>
+    <div class="caixa">
+      <div class="cab">A pergunta central</div>
+      <div class="conteudo">
+        <p style="font-size:24px;">Reescrever a EDO como um <b>sistema homogêneo</b>, achar os <b>autovalores</b>
+        e verificar se a <b>parte não linear</b> pode ser ajustada/eliminada sem mudar o comportamento perto do equilíbrio.</p>
+      </div>
+    </div>
+    <ul style="margin-top:26px;">
+      <li>Da EDO de 2ª ordem para um sistema de 1ª ordem e seus equilíbrios.</li>
+      <li>Separar parte linear × parte não linear e montar o sistema homogêneo.</li>
+      <li>Autovalores, retrato de fase (centro) e por que a linearização sozinha não basta.</li>
+      <li>Energia para decidir a estabilidade do sistema não linear — e o caso degenerado <span class="katex-inline" data-eq="h=0"></span>.</li>
+    </ul>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S3 — Da 2a ordem para um sistema
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — Da 2ª ordem para um sistema</h1></div>
+  <div class="corpo">
+    <p>Retomamos a força restauradora obtida pela Camilla (com <span data-eq="a=L+h"></span>):</p>
+    <div class="eq-grande" data-eq-display="f(x)=2kx\left(1-\dfrac{L}{\sqrt{a^2+x^2}}\right),\qquad m x'' + f(x)=0."></div>
+    <p>Definindo as variáveis de estado <span data-eq="y_1=x"></span> e <span data-eq="y_2=x'"></span>, a equação de 2ª ordem vira um sistema de 1ª ordem:</p>
+    <div class="caixa">
+      <div class="cab">Sistema de 1ª ordem</div>
+      <div class="conteudo">
+        <div data-eq-display="y_1' = y_2, \qquad\qquad y_2' = -\dfrac{1}{m}\,f(y_1)."></div>
+      </div>
+    </div>
+    <p class="sub" style="margin-top:20px;">Toda a análise de estabilidade será feita neste plano de estados <span data-eq="(y_1,y_2)=(x,x')"></span>, o <b>plano de fases</b>.</p>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S4 — Equilibrios
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — Pontos de equilíbrio</h1></div>
+  <div class="corpo">
+    <p>No equilíbrio nada varia: <span data-eq="y_1'=y_2'=0"></span>. Logo precisamos de</p>
+    <div class="eq-grande" data-eq-display="y_2 = 0 \qquad\text{e}\qquad f(y_1)=0."></div>
+    <p>Como <span data-eq="\sqrt{a^2+x^2}\ \ge\ a = L+h\ \ge\ L"></span>, a fração <span data-eq="\dfrac{L}{\sqrt{a^2+x^2}} \le 1"></span>, com igualdade somente quando <span data-eq="x=0"></span> e <span data-eq="h=0"></span> ao mesmo tempo. Portanto</p>
+    <div class="caixa">
+      <div class="cab">Único equilíbrio</div>
+      <div class="conteudo">
+        <div data-eq-display="f(x)=0 \iff x=0 \qquad\Longrightarrow\qquad \text{equilíbrio em } (y_1,y_2)=(0,0)."></div>
+      </div>
+    </div>
+    <p class="sub" style="margin-top:20px;">É o estado de repouso na posição central — exatamente o ponto em torno do qual a Camilla linearizou.</p>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S5 — Separando parte linear x nao-linear
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — Parte linear × parte não linear</h1></div>
+  <div class="corpo">
+    <p>Escrevemos <span data-eq="f(x)=f'(0)\,x + r(x)"></span>. Pela série binomial de <span data-eq="(1+u)^{-1/2}"></span> com <span data-eq="u=x^2/a^2"></span>:</p>
+    <div class="eq-grande" data-eq-display="f(x)=\underbrace{\dfrac{2kh}{a}}_{f'(0)}\,x \;+\; \underbrace{\dfrac{kL}{a^3}}_{\text{cúbico}}\,x^3 + O(x^5)."></div>
+    <p class="sub">Os coeficientes batem com os da Camilla (slide 16). Não há termo em <span data-eq="x^2"></span> porque <span data-eq="f"></span> é ímpar, então <span data-eq="r(x)=O(x^3)"></span>.</p>
+    <p style="margin-top:14px;">Com <span data-eq="\omega^2=\dfrac{f'(0)}{m}=\dfrac{2kh}{m(L+h)}"></span>, o sistema fica <b>parte linear + parte não linear</b>:</p>
+    <div class="eq-grande small" data-eq-display="\begin{pmatrix}y_1\\ y_2\end{pmatrix}' = \underbrace{\begin{pmatrix}0&1\\ -\omega^2 & 0\end{pmatrix}}_{J}\begin{pmatrix}y_1\\ y_2\end{pmatrix} \;+\; \underbrace{\begin{pmatrix}0\\ -\,r(y_1)/m\end{pmatrix}}_{G(Y)\;=\;\text{parte não linear}}"></div>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S6 — Sistema homogeneo
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — O sistema homogêneo</h1></div>
+  <div class="corpo">
+    <p>Como <span data-eq="r(x)=O(x^3)"></span>, perto da origem a parte não linear é desprezível frente à linear:</p>
+    <div class="eq-grande" data-eq-display="\dfrac{\lVert G(Y)\rVert}{\lVert Y\rVert}\ \longrightarrow\ 0 \qquad\text{quando}\qquad Y\to 0."></div>
+    <p>Essa é a <b>“parte não linear”</b> da professora. Ao retirá-la, sobra o <b>sistema linear homogêneo</b>:</p>
+    <div class="caixa">
+      <div class="cab">Sistema homogêneo</div>
+      <div class="conteudo">
+        <div data-eq-display="Y' = JY, \qquad J=\begin{pmatrix}0&1\\ -\omega^2 & 0\end{pmatrix}."></div>
+      </div>
+    </div>
+    <p class="sub" style="margin-top:20px;">É homogêneo (lado direito só depende de <span data-eq="Y"></span>, sem termo independente) e de coeficientes constantes — pronto para o método dos autovalores.</p>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S7 — Autovalores
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — Autovalores (h &gt; 0)</h1></div>
+  <div class="corpo">
+    <p>Procuramos <span data-eq="\lambda"></span> tais que <span data-eq="\det(J-\lambda I)=0"></span>:</p>
+    <div class="eq-grande" data-eq-display="\det\!\begin{pmatrix}-\lambda & 1\\ -\omega^2 & -\lambda\end{pmatrix} = \lambda^2 + \omega^2 = 0 \quad\Longrightarrow\quad \lambda = \pm\, i\,\omega."></div>
+    <div class="caixa">
+      <div class="cab">Autovalores imaginários puros</div>
+      <div class="conteudo">
+        <div data-eq-display="\lambda_{1,2} = \pm\, i\,\omega, \qquad \omega=\sqrt{\dfrac{2kh}{m(L+h)}}\ >\ 0 \quad(h>0)."></div>
+      </div>
+    </div>
+    <p style="margin-top:18px;">Para <span data-eq="\lambda=i\omega"></span>, o autovetor é <span data-eq="v=(1,\,i\omega)"></span>, pois <span data-eq="-i\omega\, v_1 + v_2 = 0"></span>. Tomando parte real e imaginária de <span data-eq="e^{i\omega t}v"></span>, obtemos a solução real no próximo slide.</p>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S8 — Solucao e retrato de fase (centro)
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — Solução e retrato de fase: centro</h1></div>
+  <div class="corpo">
+    <div class="cols">
+      <div class="txt">
+        <p>A solução geral do sistema homogêneo é</p>
+        <div class="eq-grande small" data-eq-display="Y(t)=A\begin{pmatrix}\cos\omega t\\ -\omega\sin\omega t\end{pmatrix} + B\begin{pmatrix}\sin\omega t\\ \ \ \omega\cos\omega t\end{pmatrix}."></div>
+        <p class="sub">Wronskiano <span data-eq="W=\omega\neq 0"></span>: soluções fundamentais (reproduz o slide 14 da Camilla).</p>
+        <p style="margin-top:12px;">As órbitas satisfazem <span data-eq="\frac{d}{dt}\!\left(\omega^2 y_1^2 + y_2^2\right)=0"></span>, ou seja, são <b>elipses fechadas</b>.</p>
+        <div class="caixa" style="max-width:none;">
+          <div class="cab">Classificação</div>
+          <div class="conteudo"><p style="font-size:23px;"><span data-eq="\operatorname{Re}\lambda = 0"></span> <span data-eq="\rightarrow"></span> equilíbrio é um <b>centro</b>: estável, mas <b>não</b> assintoticamente estável.</p></div>
+        </div>
+      </div>
+      <div class="img">
+        <img class="fig" src="figuras/fig1_fase_linear.png" width="470" alt="plano de fases linearizado: elipses, centro">
+      </div>
+    </div>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S9 — A linearizacao basta? Caso nao-hiperbolico
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — A linearização sozinha basta?</h1></div>
+  <div class="corpo">
+    <p>O <b>teorema da linearização</b> (Hartman–Grobman) só garante que o retrato de fase não linear
+       se parece com o linear quando o equilíbrio é <b>hiperbólico</b>, isto é, <span data-eq="\operatorname{Re}\lambda\neq 0"></span>.</p>
+    <div class="caixa">
+      <div class="cab">Nosso caso é delicado</div>
+      <div class="conteudo"><p style="font-size:24px;">Aqui <span data-eq="\lambda=\pm i\omega"></span> tem <span data-eq="\operatorname{Re}\lambda = 0"></span> <span data-eq="\rightarrow"></span> equilíbrio <b>não hiperbólico</b>. O teorema <b>não se aplica</b>: a linearização, por si só, <b>não decide</b> a estabilidade.</p></div>
+    </div>
+    <p style="margin-top:18px;">Por quê a cautela? Porque a parte não linear <span data-eq="G(Y)"></span>, por menor que seja, pode transformar
+       um centro em espiral. Vejamos o exemplo clássico no próximo slide.</p>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S10 — O exemplo do alfa (por que o centro pode virar espiral)
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — Por que o centro pode mentir: o termo α</h1></div>
+  <div class="corpo">
+    <p>Considere o sistema com a <b>mesma parte linear</b> do nosso (um centro) mais uma pequena perturbação cúbica controlada por <span data-eq="\alpha"></span>:</p>
+    <div class="eq-grande small" data-eq-display="x' = -\,y + \alpha\,x\,(x^2+y^2), \qquad y' = x + \alpha\,y\,(x^2+y^2)."></div>
+    <p>A parte linear tem autovalores <span data-eq="\pm i"></span> (centro), igual ao nosso. Mas passando para coordenadas polares <span data-eq="r^2=x^2+y^2"></span>:</p>
+    <div class="eq-grande" data-eq-display="r' = \alpha\, r^3, \qquad \theta' = 1."></div>
+    <div class="destaque-row">
+      <div class="caixa" style="max-width:none;margin:0;flex:1;">
+        <div class="cab" style="background:var(--azul);">α &lt; 0</div>
+        <div class="conteudo"><p style="font-size:22px;"><span data-eq="r"></span> decresce <span data-eq="\rightarrow"></span> <b>espiral estável</b> (atrai).</p></div>
+      </div>
+      <div class="caixa" style="max-width:none;margin:0;flex:1;">
+        <div class="cab" style="background:var(--laranja);">α &gt; 0</div>
+        <div class="conteudo"><p style="font-size:22px;"><span data-eq="r"></span> cresce <span data-eq="\rightarrow"></span> <b>espiral instável</b> (repele).</p></div>
+      </div>
+      <div class="caixa" style="max-width:none;margin:0;flex:1;">
+        <div class="cab">α = 0</div>
+        <div class="conteudo"><p style="font-size:22px;"><span data-eq="r"></span> constante <span data-eq="\rightarrow"></span> <b>centro</b>.</p></div>
+      </div>
+    </div>
+    <p class="sub" style="margin-top:16px;">Moral: com <span data-eq="\operatorname{Re}\lambda=0"></span>, três comportamentos opostos têm a <b>mesma</b> linearização. Por isso precisamos de outra ferramenta: a <b>energia</b>.</p>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S11 — Energia / funcao de Lyapunov
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — Energia decide (h &gt; 0)</h1></div>
+  <div class="corpo">
+    <p>Definimos o <b>potencial</b> e a <b>energia total</b>:</p>
+    <div class="eq-grande small" data-eq-display="V(x)=\int_0^x f(s)\,ds = kx^2 - 2kL\!\left(\sqrt{a^2+x^2}-a\right), \qquad E=\tfrac12 m v^2 + V(x)."></div>
+    <p>Ao longo das soluções, <span data-eq="E"></span> é <b>conservada</b>:</p>
+    <div class="eq-grande" data-eq-display="\dfrac{dE}{dt}=v\,\big(m x'' + f(x)\big)=0."></div>
+    <p>Como <span data-eq="V(0)=0"></span>, <span data-eq="V'(0)=0"></span> e <span data-eq="V''(0)=f'(0)=\dfrac{2kh}{a}>0"></span> (para <span data-eq="h>0"></span>),
+       o potencial tem <b>mínimo estrito</b> na origem <span data-eq="\rightarrow"></span> <span data-eq="E"></span> é definida positiva.</p>
+    <div class="caixa">
+      <div class="cab">Conclusão (h &gt; 0)</div>
+      <div class="conteudo"><p style="font-size:23px;"><span data-eq="E"></span> é uma <b>função de Lyapunov</b> conservada: as curvas <span data-eq="E=c"></span> são fechadas <span data-eq="\rightarrow"></span> o sistema <b>não linear</b> também é um <b>centro</b> (estável, soluções periódicas).</p></div>
+    </div>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S12 — Comparacao de fases linear x nao-linear (figura grande)
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — Linear × não linear: dá para eliminar?</h1></div>
+  <div class="corpo">
+    <img class="fig" src="figuras/fig2_fase_comparacao.png" width="940" alt="comparacao plano de fases linear e nao-linear">
+    <p class="legenda" style="font-size:20px;margin-top:2px;">Esquerda: elipses do sistema homogêneo. Direita: órbitas do sistema não linear (<span data-eq="L=k=m=1,\ h=0{,}5"></span>).</p>
+    <p style="margin-top:8px;font-size:22px;">Para <span data-eq="h>0"></span> os dois quadros são <b>qualitativamente iguais</b> (centro, órbitas fechadas). O que se perde ao eliminar a parte não linear é só <b>quantitativo</b>: o termo cúbico é positivo, a mola <b>“endurece”</b> e a frequência real cresce com a amplitude — o que conversa com o item (d) da Camilla.</p>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S13 — Potencial (figura) reforcando
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — O potencial confirma</h1></div>
+  <div class="corpo">
+    <div class="cols">
+      <div class="img"><img class="fig" src="figuras/fig3_potencial.png" width="620" alt="potencial nao-linear vs quadratico para varios h"></div>
+      <div class="txt">
+        <p>O potencial não linear <span data-eq="V(x)"></span> (laranja) comparado à sua aproximação quadrática <span data-eq="\tfrac{f'(0)}{2}x^2"></span> (azul).</p>
+        <ul style="margin-top:14px;">
+          <li class="laranja">Para <span data-eq="h>0"></span>: poço com mínimo estrito <span data-eq="\rightarrow"></span> órbitas fechadas, <b>centro estável</b>.</li>
+          <li class="azul">Perto de <span data-eq="x=0"></span> as duas curvas coincidem: a linearização é <b>boa localmente</b>.</li>
+          <li>Quando <span data-eq="h\to 0"></span> o poço quadrático <b>desaparece</b> (fica plano) — anúncio do caso degenerado.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S14 — Caso h=0 (degenerado) parte 1
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — O caso degenerado h = 0</h1></div>
+  <div class="corpo">
+    <p>Com <span data-eq="h=0"></span> temos <span data-eq="\omega=0"></span>: a parte linear <b>colapsa</b>.</p>
+    <div class="eq-grande" data-eq-display="J=\begin{pmatrix}0&1\\ 0&0\end{pmatrix}, \qquad \lambda=0 \ \text{(duplo, bloco nilpotente, um só autovetor)}."></div>
+    <p>A solução do <b>sistema linearizado</b> é <span data-eq="y_1(t)=y_1(0)+y_2(0)\,t"></span> — cresce sem limite se <span data-eq="v_0\neq 0"></span>. Pior ainda:</p>
+    <div class="caixa">
+      <div class="cab">Patologia do modelo linear</div>
+      <div class="conteudo"><p style="font-size:23px;">Todo ponto <span data-eq="(c,0)"></span> vira equilíbrio do sistema <b>linear</b>, enquanto o sistema <b>original</b> só tem a origem. O modelo linear perde completamente a dinâmica.</p></div>
+    </div>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S15 — Caso h=0 parte 2 (figura + conclusao)
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — h = 0: o não linear manda</h1></div>
+  <div class="corpo">
+    <div class="cols">
+      <div class="img"><img class="fig" src="figuras/fig4_caso_h0.png" width="640" alt="caso h=0: linear retas vs nao-linear orbitas fechadas"></div>
+      <div class="txt">
+        <p>Agora a <b>parte não linear é a que manda</b>. A equação relevante é</p>
+        <div class="eq-grande small" data-eq-display="m x'' + \dfrac{k}{L^2}\,x^3 = 0,"></div>
+        <p>com energia <span data-eq="V(x)\approx \dfrac{k x^4}{4L^2}"></span>, definida positiva <span data-eq="\rightarrow"></span> órbitas fechadas, sistema <b>estável e periódico</b>.</p>
+        <p class="sub" style="margin-top:10px;">Pelo escalonamento <span data-eq="x=A\,u"></span>, o período <span data-eq="\propto 1/A"></span>: <b>não existe</b> frequência natural fixa.</p>
+      </div>
+    </div>
+    <div class="caixa" style="margin-top:10px;">
+      <div class="cab">Resposta ao “ajustar ou eliminar”</div>
+      <div class="conteudo"><p style="font-size:23px;">Para <span data-eq="h>0"></span>: <b>dá para eliminar</b> (só muda o quantitativo). Para <span data-eq="h=0"></span>: <b>não dá</b> — eliminar a parte não linear destrói a força restauradora. Isso fecha com o item (e) da Camilla.</p></div>
+    </div>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S16 — Formulacao final / tabela resumo
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — Formulação final</h1></div>
+  <div class="corpo">
+    <table class="resumo">
+      <tr><th></th><th>h &gt; 0</th><th>h = 0</th></tr>
+      <tr><td>Autovalores de <span data-eq="J"></span></td><td><span data-eq="\pm i\omega,\ \ \omega^2=\frac{2kh}{m(L+h)}"></span></td><td><span data-eq="\lambda=0"></span> duplo (nilpotente)</td></tr>
+      <tr><td>Linearização</td><td>centro (estável)</td><td class="no">instável / degenerada</td></tr>
+      <tr><td>Sistema não linear</td><td class="ok">centro (energia)</td><td class="ok">estável, periódico</td></tr>
+      <tr><td>Eliminar a parte não linear?</td><td class="ok">sim, qualitativamente</td><td class="no">não</td></tr>
+    </table>
+    <ul style="margin-top:20px;">
+      <li>O sistema homogêneo <span data-eq="Y'=JY"></span> e seus autovalores respondem “abrir em um sistema” e “tirar a não-linearidade”.</li>
+      <li>Para <span data-eq="h>0"></span> a parte não linear é um detalhe quantitativo; a <b>energia</b> confirma o centro.</li>
+      <li>Para <span data-eq="h=0"></span> ela é essencial — a estabilidade vem só do termo cúbico.</li>
+    </ul>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S17 — Encerramento da parte
+     ============================================================ -->
+<section class="slide secao">
+  <div class="titulo-secao" style="font-size:54px;top:130px;">Obrigado!<br><span style="font-size:30px;font-weight:400;">Dúvidas sobre a estabilidade?</span></div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<script src="katex/katex.min.js"></script>
+<script>
+  // Renderiza equacoes inline (data-eq) e em display (data-eq-display)
+  document.querySelectorAll('[data-eq]').forEach(function(el){
+    katex.render(el.getAttribute('data-eq'), el, {throwOnError:false, displayMode:false});
+  });
+  document.querySelectorAll('[data-eq-display]').forEach(function(el){
+    katex.render(el.getAttribute('data-eq-display'), el, {throwOnError:false, displayMode:true});
+  });
+  window.__katexDone = true;
+</script>
+</body>
+</html>
