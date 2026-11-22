@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Estabilidade — Projeto 2 EDO (João)</title>
+
+<link rel="stylesheet" href="estilo.css">
+
+<style>
+ .eqd{display:block;margin:14px auto;}
+ .eq-grande{line-height:0;}
+ .eqi{display:inline-block;}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     SLIDE S1 — divisor de secao (fundo azul/cinza inteiro)
+     Marca o INICIO da parte do Joao.
+     ============================================================ -->
+<section class="slide secao">
+  <div class="titulo-secao">Estabilidade</div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S2 — O que vamos responder (roteiro)
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — o que vamos responder</h1></div>
+  <div class="corpo">
+    <p>Partindo da equação não linear da massa, queremos decidir o que a professora pediu:</p>
+    <div class="caixa">
+      <div class="cab">A pergunta central</div>
+      <div class="conteudo">
+        <p style="font-size:24px;">Reescrever a EDO como um <b>sistema homogêneo</b>, achar os <b>autovalores</b>
+        e verificar se a <b>parte não linear</b> pode ser ajustada/eliminada sem mudar o comportamento perto do equilíbrio.</p>
+      </div>
+    </div>
+    <ul style="margin-top:26px;">
+      <li>Da EDO de 2ª ordem para um sistema de 1ª ordem e seus equilíbrios.</li>
+      <li>Separar parte linear × parte não linear e montar o sistema homogêneo.</li>
+      <li>Autovalores, retrato de fase (centro) e por que a linearização sozinha não basta.</li>
+      <li>Energia para decidir a estabilidade do sistema não linear — e o caso degenerado <img class="eqi" src="eq_img/eq_2ba1b3acb05d.png" style="height:30px;width:85px;vertical-align:-22%;" alt="eq">.</li>
+    </ul>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S3 — Da 2a ordem para um sistema
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — Da 2ª ordem para um sistema</h1></div>
+  <div class="corpo">
+    <p>Retomamos a força restauradora obtida pela Camilla (com <img class="eqi" src="eq_img/eq_855710bf79d1.png" style="height:30px;width:142px;vertical-align:-22%;" alt="eq">):</p>
+    <img class="eqd" src="eq_img/eq_720002cd7c5d.png" style="height:52px;width:451px;" alt="eq">
+    <p>Definindo as variáveis de estado <img class="eqi" src="eq_img/eq_bb6ee85d08b3.png" style="height:30px;width:108px;vertical-align:-22%;" alt="eq"> e <img class="eqi" src="eq_img/eq_17a8590f180a.png" style="height:30px;width:83px;vertical-align:-22%;" alt="eq">, a equação de 2ª ordem vira um sistema de 1ª ordem:</p>
+    <div class="caixa">
+      <div class="cab">Sistema de 1ª ordem</div>
+      <div class="conteudo">
+        <img class="eqd" src="eq_img/eq_415c654d7190.png" style="height:44px;width:292px;" alt="eq">
+      </div>
+    </div>
+    <p class="sub" style="margin-top:20px;">Toda a análise de estabilidade será feita neste plano de estados <img class="eqi" src="eq_img/eq_b21735345d2f.png" style="height:30px;width:176px;vertical-align:-22%;" alt="eq">, o <b>plano de fases</b>.</p>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S4 — Equilibrios
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — Pontos de equilíbrio</h1></div>
+  <div class="corpo">
+    <p>No equilíbrio nada varia: <img class="eqi" src="eq_img/eq_f308f3567d0b.png" style="height:30px;width:127px;vertical-align:-22%;" alt="eq">. Logo precisamos de</p>
+    <img class="eqd" src="eq_img/eq_f29fa5d6920b.png" style="height:23px;width:235px;" alt="eq">
+    <p>Como <img class="eqi" src="eq_img/eq_7270b803aad7.png" style="height:30px;width:320px;vertical-align:-22%;" alt="eq">, a fração <img class="eqi" src="eq_img/eq_a6afde718d22.png" style="height:46px;width:112px;vertical-align:-30%;" alt="eq">, com igualdade somente quando <img class="eqi" src="eq_img/eq_e11729b0b65e.png" style="height:30px;width:87px;vertical-align:-22%;" alt="eq"> e <img class="eqi" src="eq_img/eq_2ba1b3acb05d.png" style="height:30px;width:85px;vertical-align:-22%;" alt="eq"> ao mesmo tempo. Portanto</p>
+    <div class="caixa">
+      <div class="cab">Único equilíbrio</div>
+      <div class="conteudo">
+        <img class="eqd" src="eq_img/eq_68ec4fbe44f3.png" style="height:23px;width:568px;" alt="eq">
+      </div>
+    </div>
+    <p class="sub" style="margin-top:20px;">É o estado de repouso na posição central — exatamente o ponto em torno do qual a Camilla linearizou.</p>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S5 — Separando parte linear x nao-linear
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — Parte linear × parte não linear</h1></div>
+  <div class="corpo">
+    <p>Escrevemos <img class="eqi" src="eq_img/eq_2c5fc840c1bb.png" style="height:30px;width:234px;vertical-align:-22%;" alt="eq">. Pela série binomial de <img class="eqi" src="eq_img/eq_db191d586978.png" style="height:30px;width:107px;vertical-align:-22%;" alt="eq"> com <img class="eqi" src="eq_img/eq_3b079fd998f3.png" style="height:30px;width:105px;vertical-align:-22%;" alt="eq">:</p>
+    <img class="eqd" src="eq_img/eq_f4dafe7cb0dc.png" style="height:76px;width:299px;" alt="eq">
+    <p class="sub">Os coeficientes batem com os da Camilla (slide 16). Não há termo em <img class="eqi" src="eq_img/eq_32f5240d0dbf.png" style="height:30px;width:31px;vertical-align:-22%;" alt="eq"> porque <img class="eqi" src="eq_img/eq_8fa14cdd754f.png" style="height:30px;width:19px;vertical-align:-22%;" alt="eq"> é ímpar, então <img class="eqi" src="eq_img/eq_c04c5b4953be.png" style="height:30px;width:137px;vertical-align:-22%;" alt="eq">.</p>
+    <p style="margin-top:14px;">Com <img class="eqi" src="eq_img/eq_c407dcee123f.png" style="height:46px;width:190px;vertical-align:-30%;" alt="eq">, o sistema fica <b>parte linear + parte não linear</b>:</p>
+    <img class="eqd" src="eq_img/eq_1d732eb4d01c.png" style="height:86px;width:413px;" alt="eq">
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S6 — Sistema homogeneo
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — O sistema homogêneo</h1></div>
+  <div class="corpo">
+    <p>Como <img class="eqi" src="eq_img/eq_c04c5b4953be.png" style="height:30px;width:137px;vertical-align:-22%;" alt="eq">, perto da origem a parte não linear é desprezível frente à linear:</p>
+    <img class="eqd" src="eq_img/eq_8a54c47dfbf3.png" style="height:51px;width:346px;" alt="eq">
+    <p>Essa é a <b>“parte não linear”</b> da professora. Ao retirá-la, sobra o <b>sistema linear homogêneo</b>:</p>
+    <div class="caixa">
+      <div class="cab">Sistema homogêneo</div>
+      <div class="conteudo">
+        <img class="eqd" src="eq_img/eq_827fd2c167b2.png" style="height:52px;width:274px;" alt="eq">
+      </div>
+    </div>
+    <p class="sub" style="margin-top:20px;">É homogêneo (lado direito só depende de <img class="eqi" src="eq_img/eq_57cec4137b61.png" style="height:30px;width:32px;vertical-align:-22%;" alt="eq">, sem termo independente) e de coeficientes constantes — pronto para o método dos autovalores.</p>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S7 — Autovalores
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — Autovalores (h &gt; 0)</h1></div>
+  <div class="corpo">
+    <p>Procuramos <img class="eqi" src="eq_img/eq_c6a6eb61fd9c.png" style="height:30px;width:23px;vertical-align:-22%;" alt="eq"> tais que <img class="eqi" src="eq_img/eq_655f22294dfc.png" style="height:30px;width:181px;vertical-align:-22%;" alt="eq">:</p>
+    <img class="eqd" src="eq_img/eq_3c84c654e1bd.png" style="height:52px;width:446px;" alt="eq">
+    <div class="caixa">
+      <div class="cab">Autovalores imaginários puros</div>
+      <div class="conteudo">
+        <img class="eqd" src="eq_img/eq_3e157f2906ba.png" style="height:61px;width:437px;" alt="eq">
+      </div>
+    </div>
+    <p style="margin-top:18px;">Para <img class="eqi" src="eq_img/eq_72ca356b8804.png" style="height:30px;width:103px;vertical-align:-22%;" alt="eq">, o autovetor é <img class="eqi" src="eq_img/eq_811f63dcc549.png" style="height:30px;width:123px;vertical-align:-22%;" alt="eq">, pois <img class="eqi" src="eq_img/eq_31e2f49c711c.png" style="height:30px;width:206px;vertical-align:-22%;" alt="eq">. Tomando parte real e imaginária de <img class="eqi" src="eq_img/eq_875c7368c6f9.png" style="height:30px;width:62px;vertical-align:-22%;" alt="eq">, obtemos a solução real no próximo slide.</p>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S8 — Solucao e retrato de fase (centro)
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — Solução e retrato de fase: centro</h1></div>
+  <div class="corpo">
+    <div class="cols">
+      <div class="txt">
+        <p>A solução geral do sistema homogêneo é</p>
+        <img class="eqd" src="eq_img/eq_79fe3a75d42c.png" style="height:52px;width:358px;" alt="eq">
+        <p class="sub">Wronskiano <img class="eqi" src="eq_img/eq_8d0358a65008.png" style="height:30px;width:136px;vertical-align:-22%;" alt="eq">: soluções fundamentais (reproduz o slide 14 da Camilla).</p>
+        <p style="margin-top:12px;">As órbitas satisfazem <img class="eqi" src="eq_img/eq_c15566ce8673.png" style="height:30px;width:167px;vertical-align:-22%;" alt="eq">, ou seja, são <b>elipses fechadas</b>.</p>
+        <div class="caixa" style="max-width:none;">
+          <div class="cab">Classificação</div>
+          <div class="conteudo"><p style="font-size:23px;"><img class="eqi" src="eq_img/eq_b3997e59dc72.png" style="height:30px;width:130px;vertical-align:-22%;" alt="eq"> <img class="eqi" src="eq_img/eq_0a183ed5142c.png" style="height:30px;width:46px;vertical-align:-22%;" alt="eq"> equilíbrio é um <b>centro</b>: estável, mas <b>não</b> assintoticamente estável.</p></div>
+        </div>
+      </div>
+      <div class="img">
+        <img class="fig" src="figuras/fig1_fase_linear.png" width="470" alt="plano de fases linearizado: elipses, centro">
+      </div>
+    </div>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S9 — A linearizacao basta? Caso nao-hiperbolico
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — A linearização sozinha basta?</h1></div>
+  <div class="corpo">
+    <p>O <b>teorema da linearização</b> (Hartman–Grobman) só garante que o retrato de fase não linear
+       se parece com o linear quando o equilíbrio é <b>hiperbólico</b>, isto é, <img class="eqi" src="eq_img/eq_29f0dfe60a79.png" style="height:30px;width:105px;vertical-align:-22%;" alt="eq">.</p>
+    <div class="caixa">
+      <div class="cab">Nosso caso é delicado</div>
+      <div class="conteudo"><p style="font-size:24px;">Aqui <img class="eqi" src="eq_img/eq_c0d32f594340.png" style="height:30px;width:129px;vertical-align:-22%;" alt="eq"> tem <img class="eqi" src="eq_img/eq_b3997e59dc72.png" style="height:30px;width:130px;vertical-align:-22%;" alt="eq"> <img class="eqi" src="eq_img/eq_0a183ed5142c.png" style="height:30px;width:46px;vertical-align:-22%;" alt="eq"> equilíbrio <b>não hiperbólico</b>. O teorema <b>não se aplica</b>: a linearização, por si só, <b>não decide</b> a estabilidade.</p></div>
+    </div>
+    <p style="margin-top:18px;">Por quê a cautela? Porque a parte não linear <img class="eqi" src="eq_img/eq_67d961415c10.png" style="height:30px;width:61px;vertical-align:-22%;" alt="eq">, por menor que seja, pode transformar
+       um centro em espiral. Vejamos o exemplo clássico no próximo slide.</p>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S10 — O exemplo do alfa (por que o centro pode virar espiral)
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — Por que o centro pode mentir: o termo α</h1></div>
+  <div class="corpo">
+    <p>Considere o sistema com a <b>mesma parte linear</b> do nosso (um centro) mais uma pequena perturbação cúbica controlada por <img class="eqi" src="eq_img/eq_7b7f9dbfea05.png" style="height:30px;width:36px;vertical-align:-22%;" alt="eq">:</p>
+    <img class="eqd" src="eq_img/eq_c78890f94a33.png" style="height:26px;width:453px;" alt="eq">
+    <p>A parte linear tem autovalores <img class="eqi" src="eq_img/eq_36589c0963bd.png" style="height:30px;width:43px;vertical-align:-22%;" alt="eq"> (centro), igual ao nosso. Mas passando para coordenadas polares <img class="eqi" src="eq_img/eq_c0c23ae55539.png" style="height:30px;width:135px;vertical-align:-22%;" alt="eq">:</p>
+    <img class="eqd" src="eq_img/eq_6c66d4927271.png" style="height:25px;width:184px;" alt="eq">
+    <div class="destaque-row">
+      <div class="caixa" style="max-width:none;margin:0;flex:1;">
+        <div class="cab" style="background:var(--azul);">α &lt; 0</div>
+        <div class="conteudo"><p style="font-size:22px;"><img class="eqi" src="eq_img/eq_4b43b0aee356.png" style="height:30px;width:28px;vertical-align:-22%;" alt="eq"> decresce <img class="eqi" src="eq_img/eq_0a183ed5142c.png" style="height:30px;width:46px;vertical-align:-22%;" alt="eq"> <b>espiral estável</b> (atrai).</p></div>
+      </div>
+      <div class="caixa" style="max-width:none;margin:0;flex:1;">
+        <div class="cab" style="background:var(--laranja);">α &gt; 0</div>
+        <div class="conteudo"><p style="font-size:22px;"><img class="eqi" src="eq_img/eq_4b43b0aee356.png" style="height:30px;width:28px;vertical-align:-22%;" alt="eq"> cresce <img class="eqi" src="eq_img/eq_0a183ed5142c.png" style="height:30px;width:46px;vertical-align:-22%;" alt="eq"> <b>espiral instável</b> (repele).</p></div>
+      </div>
+      <div class="caixa" style="max-width:none;margin:0;flex:1;">
+        <div class="cab">α = 0</div>
+        <div class="conteudo"><p style="font-size:22px;"><img class="eqi" src="eq_img/eq_4b43b0aee356.png" style="height:30px;width:28px;vertical-align:-22%;" alt="eq"> constante <img class="eqi" src="eq_img/eq_0a183ed5142c.png" style="height:30px;width:46px;vertical-align:-22%;" alt="eq"> <b>centro</b>.</p></div>
+      </div>
+    </div>
+    <p class="sub" style="margin-top:16px;">Moral: com <img class="eqi" src="eq_img/eq_e897b833c4da.png" style="height:30px;width:130px;vertical-align:-22%;" alt="eq">, três comportamentos opostos têm a <b>mesma</b> linearização. Por isso precisamos de outra ferramenta: a <b>energia</b>.</p>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S11 — Energia / funcao de Lyapunov
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — Energia decide (h &gt; 0)</h1></div>
+  <div class="corpo">
+    <p>Definimos o <b>potencial</b> e a <b>energia total</b>:</p>
+    <img class="eqd" src="eq_img/eq_8b22e43705c4.png" style="height:51px;width:644px;" alt="eq">
+    <p>Ao longo das soluções, <img class="eqi" src="eq_img/eq_3a3ea00cfc35.png" style="height:30px;width:32px;vertical-align:-22%;" alt="eq"> é <b>conservada</b>:</p>
+    <img class="eqd" src="eq_img/eq_8602b5f4ae70.png" style="height:45px;width:235px;" alt="eq">
+    <p>Como <img class="eqi" src="eq_img/eq_1141a52d1df5.png" style="height:30px;width:102px;vertical-align:-22%;" alt="eq">, <img class="eqi" src="eq_img/eq_4faa62f2b9d5.png" style="height:30px;width:108px;vertical-align:-22%;" alt="eq"> e <img class="eqi" src="eq_img/eq_f29fd4b83cdd.png" style="height:46px;width:228px;vertical-align:-30%;" alt="eq"> (para <img class="eqi" src="eq_img/eq_e07d10581add.png" style="height:30px;width:83px;vertical-align:-22%;" alt="eq">),
+       o potencial tem <b>mínimo estrito</b> na origem <img class="eqi" src="eq_img/eq_0a183ed5142c.png" style="height:30px;width:46px;vertical-align:-22%;" alt="eq"> <img class="eqi" src="eq_img/eq_3a3ea00cfc35.png" style="height:30px;width:32px;vertical-align:-22%;" alt="eq"> é definida positiva.</p>
+    <div class="caixa">
+      <div class="cab">Conclusão (h &gt; 0)</div>
+      <div class="conteudo"><p style="font-size:23px;"><img class="eqi" src="eq_img/eq_3a3ea00cfc35.png" style="height:30px;width:32px;vertical-align:-22%;" alt="eq"> é uma <b>função de Lyapunov</b> conservada: as curvas <img class="eqi" src="eq_img/eq_0e4d534ccb73.png" style="height:30px;width:94px;vertical-align:-22%;" alt="eq"> são fechadas <img class="eqi" src="eq_img/eq_0a183ed5142c.png" style="height:30px;width:46px;vertical-align:-22%;" alt="eq"> o sistema <b>não linear</b> também é um <b>centro</b> (estável, soluções periódicas).</p></div>
+    </div>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S12 — Comparacao de fases linear x nao-linear (figura grande)
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — Linear × não linear: dá para eliminar?</h1></div>
+  <div class="corpo">
+    <img class="fig" src="figuras/fig2_fase_comparacao.png" width="940" alt="comparacao plano de fases linear e nao-linear">
+    <p class="legenda" style="font-size:20px;margin-top:2px;">Esquerda: elipses do sistema homogêneo. Direita: órbitas do sistema não linear (<img class="eqi" src="eq_img/eq_4be9f68ff6ac.png" style="height:30px;width:300px;vertical-align:-22%;" alt="eq">).</p>
+    <p style="margin-top:8px;font-size:22px;">Para <img class="eqi" src="eq_img/eq_e07d10581add.png" style="height:30px;width:83px;vertical-align:-22%;" alt="eq"> os dois quadros são <b>qualitativamente iguais</b> (centro, órbitas fechadas). O que se perde ao eliminar a parte não linear é só <b>quantitativo</b>: o termo cúbico é positivo, a mola <b>“endurece”</b> e a frequência real cresce com a amplitude — o que conversa com o item (d) da Camilla.</p>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S13 — Potencial (figura) reforcando
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — O potencial confirma</h1></div>
+  <div class="corpo">
+    <div class="cols">
+      <div class="img"><img class="fig" src="figuras/fig3_potencial.png" width="620" alt="potencial nao-linear vs quadratico para varios h"></div>
+      <div class="txt">
+        <p>O potencial não linear <img class="eqi" src="eq_img/eq_7da3f9417e34.png" style="height:30px;width:56px;vertical-align:-22%;" alt="eq"> (laranja) comparado à sua aproximação quadrática <img class="eqi" src="eq_img/eq_c62683d8c057.png" style="height:46px;width:78px;vertical-align:-30%;" alt="eq"> (azul).</p>
+        <ul style="margin-top:14px;">
+          <li class="laranja">Para <img class="eqi" src="eq_img/eq_e07d10581add.png" style="height:30px;width:83px;vertical-align:-22%;" alt="eq">: poço com mínimo estrito <img class="eqi" src="eq_img/eq_0a183ed5142c.png" style="height:30px;width:46px;vertical-align:-22%;" alt="eq"> órbitas fechadas, <b>centro estável</b>.</li>
+          <li class="azul">Perto de <img class="eqi" src="eq_img/eq_e11729b0b65e.png" style="height:30px;width:87px;vertical-align:-22%;" alt="eq"> as duas curvas coincidem: a linearização é <b>boa localmente</b>.</li>
+          <li>Quando <img class="eqi" src="eq_img/eq_abc9a2acb046.png" style="height:30px;width:92px;vertical-align:-22%;" alt="eq"> o poço quadrático <b>desaparece</b> (fica plano) — anúncio do caso degenerado.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S14 — Caso h=0 (degenerado) parte 1
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — O caso degenerado h = 0</h1></div>
+  <div class="corpo">
+    <p>Com <img class="eqi" src="eq_img/eq_2ba1b3acb05d.png" style="height:30px;width:85px;vertical-align:-22%;" alt="eq"> temos <img class="eqi" src="eq_img/eq_3727c0529ba4.png" style="height:30px;width:92px;vertical-align:-22%;" alt="eq">: a parte linear <b>colapsa</b>.</p>
+    <img class="eqd" src="eq_img/eq_fda982877676.png" style="height:52px;width:591px;" alt="eq">
+    <p>A solução do <b>sistema linearizado</b> é <img class="eqi" src="eq_img/eq_25e0fefca34e.png" style="height:30px;width:244px;vertical-align:-22%;" alt="eq"> — cresce sem limite se <img class="eqi" src="eq_img/eq_8bc6eabe14ce.png" style="height:30px;width:77px;vertical-align:-22%;" alt="eq">. Pior ainda:</p>
+    <div class="caixa">
+      <div class="cab">Patologia do modelo linear</div>
+      <div class="conteudo"><p style="font-size:23px;">Todo ponto <img class="eqi" src="eq_img/eq_fd633a514a03.png" style="height:30px;width:55px;vertical-align:-22%;" alt="eq"> vira equilíbrio do sistema <b>linear</b>, enquanto o sistema <b>original</b> só tem a origem. O modelo linear perde completamente a dinâmica.</p></div>
+    </div>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S15 — Caso h=0 parte 2 (figura + conclusao)
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — h = 0: o não linear manda</h1></div>
+  <div class="corpo">
+    <div class="cols">
+      <div class="img"><img class="fig" src="figuras/fig4_caso_h0.png" width="640" alt="caso h=0: linear retas vs nao-linear orbitas fechadas"></div>
+      <div class="txt">
+        <p>Agora a <b>parte não linear é a que manda</b>. A equação relevante é</p>
+        <img class="eqd" src="eq_img/eq_fb90a6a03d00.png" style="height:45px;width:157px;" alt="eq">
+        <p>com energia <img class="eqi" src="eq_img/eq_dfcd6cc1afaf.png" style="height:46px;width:103px;vertical-align:-30%;" alt="eq">, definida positiva <img class="eqi" src="eq_img/eq_0a183ed5142c.png" style="height:30px;width:46px;vertical-align:-22%;" alt="eq"> órbitas fechadas, sistema <b>estável e periódico</b>.</p>
+        <p class="sub" style="margin-top:10px;">Pelo escalonamento <img class="eqi" src="eq_img/eq_0dedb895f219.png" style="height:30px;width:118px;vertical-align:-22%;" alt="eq">, o período <img class="eqi" src="eq_img/eq_a693318ce732.png" style="height:30px;width:74px;vertical-align:-22%;" alt="eq">: <b>não existe</b> frequência natural fixa.</p>
+      </div>
+    </div>
+    <div class="caixa" style="margin-top:10px;">
+      <div class="cab">Resposta ao “ajustar ou eliminar”</div>
+      <div class="conteudo"><p style="font-size:23px;">Para <img class="eqi" src="eq_img/eq_e07d10581add.png" style="height:30px;width:83px;vertical-align:-22%;" alt="eq">: <b>dá para eliminar</b> (só muda o quantitativo). Para <img class="eqi" src="eq_img/eq_2ba1b3acb05d.png" style="height:30px;width:85px;vertical-align:-22%;" alt="eq">: <b>não dá</b> — eliminar a parte não linear destrói a força restauradora. Isso fecha com o item (e) da Camilla.</p></div>
+    </div>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S16 — Formulacao final / tabela resumo
+     ============================================================ -->
+<section class="slide">
+  <div class="topbar"><h1>Estabilidade — Formulação final</h1></div>
+  <div class="corpo">
+    <table class="resumo">
+      <tr><th></th><th>h &gt; 0</th><th>h = 0</th></tr>
+      <tr><td>Autovalores de <img class="eqi" src="eq_img/eq_ff44570aca82.png" style="height:30px;width:26px;vertical-align:-22%;" alt="eq"></td><td><img class="eqi" src="eq_img/eq_d32de2abb309.png" style="height:46px;width:235px;vertical-align:-30%;" alt="eq"></td><td><img class="eqi" src="eq_img/eq_eafdd30d8534.png" style="height:30px;width:84px;vertical-align:-22%;" alt="eq"> duplo (nilpotente)</td></tr>
+      <tr><td>Linearização</td><td>centro (estável)</td><td class="no">instável / degenerada</td></tr>
+      <tr><td>Sistema não linear</td><td class="ok">centro (energia)</td><td class="ok">estável, periódico</td></tr>
+      <tr><td>Eliminar a parte não linear?</td><td class="ok">sim, qualitativamente</td><td class="no">não</td></tr>
+    </table>
+    <ul style="margin-top:20px;">
+      <li>O sistema homogêneo <img class="eqi" src="eq_img/eq_a9084850f830.png" style="height:30px;width:124px;vertical-align:-22%;" alt="eq"> e seus autovalores respondem “abrir em um sistema” e “tirar a não-linearidade”.</li>
+      <li>Para <img class="eqi" src="eq_img/eq_e07d10581add.png" style="height:30px;width:83px;vertical-align:-22%;" alt="eq"> a parte não linear é um detalhe quantitativo; a <b>energia</b> confirma o centro.</li>
+      <li>Para <img class="eqi" src="eq_img/eq_2ba1b3acb05d.png" style="height:30px;width:85px;vertical-align:-22%;" alt="eq"> ela é essencial — a estabilidade vem só do termo cúbico.</li>
+    </ul>
+  </div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+<!-- ============================================================
+     SLIDE S17 — Encerramento da parte
+     ============================================================ -->
+<section class="slide secao">
+  <div class="titulo-secao" style="font-size:54px;top:130px;">Obrigado!<br><span style="font-size:30px;font-weight:400;">Dúvidas sobre a estabilidade?</span></div>
+  <div class="rodape"><div class="f1">Camilla e João</div><div class="f2">Linearização e estabilidade</div><div class="f3">Parte 2 — João</div></div>
+</section>
+
+
+
+</body>
+</html>

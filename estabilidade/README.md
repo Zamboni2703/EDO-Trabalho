@@ -9,9 +9,10 @@ Camilla foi alterado. A ideia é apresentar esta sequência logo após o slide "
 
 | Arquivo | O que é |
 |---|---|
-| **`Estabilidade_Joao_imagens.pdf`** | **Versão para IMPORTAR NO CANVA** (17 páginas, cada slide como imagem única). Importa limpo, sem erros. **Use este no Canva.** |
-| `slides_png/` | Cada slide como PNG individual (2400×1350). Alternativa: arraste cada imagem como fundo de página no Canva. |
-| `Estabilidade_Joao.pdf` | Slides com texto/equações vetoriais (17 páginas, 16:9). Ótimo para apresentar direto, mas **não importe no Canva** — as equações viram centenas de fragmentos. |
+| **`Estabilidade_Joao_canva.pdf`** | **Versão para IMPORTAR NO CANVA mantendo o texto editável.** O texto continua texto (você muda tamanho/palavras); cada **equação é uma imagem** que o Canva não quebra e que você redimensiona (arrastar os cantos = aumentar a "fonte" da conta). **É o recomendado para editar no Canva.** |
+| `Estabilidade_Joao_imagens.pdf` | Cada slide como uma imagem única. Importa 100% limpo, mas **nada é editável** (nem texto). Use se só for apresentar/montar sem editar. |
+| `slides_png/` | Cada slide como PNG individual (3200×1800). Alternativa: arraste como fundo de página no Canva. |
+| `Estabilidade_Joao.pdf` | Slides com equações vetoriais (KaTeX). Ótimo para apresentar direto do PDF, mas **não importe no Canva** — lá as equações viram centenas de fragmentos embaralhados. |
 | `slides.html` | Fonte editável dos slides (HTML + CSS + KaTeX). |
 | `estilo.css` | Template visual (cores, fontes, rodapé) replicando o Canva da Camilla. |
 | `roteiro_fala.md` | Roteiro de fala slide a slide, com tempos (~30 min) e perguntas prováveis. |
@@ -40,12 +41,29 @@ Camilla foi alterado. A ideia é apresentar esta sequência logo após o slide "
 16. Formulação final (tabela-resumo)
 17. Obrigado / dúvidas
 
-## Importar no Canva (sem erros)
+## Importar no Canva (sem os erros de antes)
 
-Importe **`Estabilidade_Joao_imagens.pdf`** (não o `Estabilidade_Joao.pdf`). Nessa versão
-cada slide é uma imagem única, então o Canva não tenta reinterpretar as equações como texto
-editável — que era o que gerava o emaranhado de "erros" na importação. O visual fica idêntico.
-Se preferir, use os PNGs de `slides_png/` como fundo de cada página.
+**Por que o PDF original dava erro no Canva:** as equações eram texto vetorial (LaTeX/KaTeX).
+O Canva não entende matemática, então ao importar ele quebrava cada equação em dezenas de
+glifos soltos, com frações, raízes e acentos embaralhados.
+
+**Solução — importe `Estabilidade_Joao_canva.pdf`:**
+- O **texto** (títulos, parágrafos, bullets, rodapé) entra como **texto editável** no Canva —
+  você muda tamanho e palavras normalmente.
+- Cada **equação** entra como **imagem** (PNG transparente). O Canva não quebra imagem.
+  Para "mudar o tamanho da fonte" de uma conta, basta **selecionar a imagem e arrastar o canto**.
+
+As equações ficam na pasta `eq_img/` (uma por arquivo). Se quiser trocar alguma por uma maior,
+me peça e eu regero, ou rode `gerar_equacoes.py` e `montar_canva.py`.
+
+### Como regerar a versão Canva
+```bash
+python3 gerar_equacoes.py        # gera eq_img/*.png (equações) + eq_map.json
+python3 montar_canva.py          # gera slides_canva.html
+chrome --headless --no-sandbox --disable-gpu --no-pdf-header-footer \
+  --virtual-time-budget=8000 --run-all-compositor-stages-before-draw \
+  --print-to-pdf=Estabilidade_Joao_canva.pdf slides_canva.html
+```
 
 ## Como editar e regerar o PDF
 
