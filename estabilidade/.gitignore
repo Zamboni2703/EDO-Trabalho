@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+_eq*.html
+_eq*.png

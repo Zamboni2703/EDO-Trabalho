@@ -1,0 +1,440 @@
+{
+ "(1+u)^{-1/2}": {
+  "file": "eq_img/eq_db191d586978.png",
+  "w": 188.3,
+  "h": 52.7,
+  "display": false
+ },
+ "(c,0)": {
+  "file": "eq_img/eq_fd633a514a03.png",
+  "w": 85.7,
+  "h": 47.0,
+  "display": false
+ },
+ "(y_1,y_2)=(x,x')": {
+  "file": "eq_img/eq_b21735345d2f.png",
+  "w": 277.3,
+  "h": 47.3,
+  "display": false
+ },
+ "-i\\omega\\, v_1 + v_2 = 0": {
+  "file": "eq_img/eq_31e2f49c711c.png",
+  "w": 273.0,
+  "h": 39.7,
+  "display": false
+ },
+ "E": {
+  "file": "eq_img/eq_3a3ea00cfc35.png",
+  "w": 36.3,
+  "h": 34.0,
+  "display": false
+ },
+ "E=c": {
+  "file": "eq_img/eq_0e4d534ccb73.png",
+  "w": 108.0,
+  "h": 34.3,
+  "display": false
+ },
+ "G(Y)": {
+  "file": "eq_img/eq_67d961415c10.png",
+  "w": 95.7,
+  "h": 47.0,
+  "display": false
+ },
+ "J": {
+  "file": "eq_img/eq_ff44570aca82.png",
+  "w": 30.0,
+  "h": 35.0,
+  "display": false
+ },
+ "J=\\begin{pmatrix}0&1\\\\ 0&0\\end{pmatrix}, \\qquad \\lambda=0 \\ \\text{(duplo, bloco nilpotente, um só autovetor)}.": {
+  "file": "eq_img/eq_fda982877676.png",
+  "w": 1285.3,
+  "h": 112.7,
+  "display": true
+ },
+ "L=k=m=1,\\ h=0{,}5": {
+  "file": "eq_img/eq_4be9f68ff6ac.png",
+  "w": 423.7,
+  "h": 42.3,
+  "display": false
+ },
+ "V''(0)=f'(0)=\\dfrac{2kh}{a}>0": {
+  "file": "eq_img/eq_f29fd4b83cdd.png",
+  "w": 442.3,
+  "h": 89.3,
+  "display": false
+ },
+ "V'(0)=0": {
+  "file": "eq_img/eq_4faa62f2b9d5.png",
+  "w": 169.7,
+  "h": 47.3,
+  "display": false
+ },
+ "V(0)=0": {
+  "file": "eq_img/eq_1141a52d1df5.png",
+  "w": 160.0,
+  "h": 47.0,
+  "display": false
+ },
+ "V(x)": {
+  "file": "eq_img/eq_7da3f9417e34.png",
+  "w": 87.3,
+  "h": 47.0,
+  "display": false
+ },
+ "V(x)=\\int_0^x f(s)\\,ds = kx^2 - 2kL\\!\\left(\\sqrt{a^2+x^2}-a\\right), \\qquad E=\\tfrac12 m v^2 + V(x).": {
+  "file": "eq_img/eq_8b22e43705c4.png",
+  "w": 1399.3,
+  "h": 110.0,
+  "display": true
+ },
+ "V(x)\\approx \\dfrac{k x^4}{4L^2}": {
+  "file": "eq_img/eq_dfcd6cc1afaf.png",
+  "w": 212.3,
+  "h": 95.0,
+  "display": false
+ },
+ "W=\\omega\\neq 0": {
+  "file": "eq_img/eq_8d0358a65008.png",
+  "w": 199.7,
+  "h": 44.0,
+  "display": false
+ },
+ "Y": {
+  "file": "eq_img/eq_57cec4137b61.png",
+  "w": 36.3,
+  "h": 34.0,
+  "display": false
+ },
+ "Y' = JY, \\qquad J=\\begin{pmatrix}0&1\\\\ -\\omega^2 & 0\\end{pmatrix}.": {
+  "file": "eq_img/eq_827fd2c167b2.png",
+  "w": 596.7,
+  "h": 112.7,
+  "display": true
+ },
+ "Y'=JY": {
+  "file": "eq_img/eq_a9084850f830.png",
+  "w": 157.7,
+  "h": 38.3,
+  "display": false
+ },
+ "Y(t)=A\\begin{pmatrix}\\cos\\omega t\\\\ -\\omega\\sin\\omega t\\end{pmatrix} + B\\begin{pmatrix}\\sin\\omega t\\\\ \\ \\ \\omega\\cos\\omega t\\end{pmatrix}.": {
+  "file": "eq_img/eq_79fe3a75d42c.png",
+  "w": 778.3,
+  "h": 112.7,
+  "display": true
+ },
+ "\\alpha": {
+  "file": "eq_img/eq_7b7f9dbfea05.png",
+  "w": 29.7,
+  "h": 24.7,
+  "display": false
+ },
+ "\\begin{pmatrix}y_1\\\\ y_2\\end{pmatrix}' = \\underbrace{\\begin{pmatrix}0&1\\\\ -\\omega^2 & 0\\end{pmatrix}}_{J}\\begin{pmatrix}y_1\\\\ y_2\\end{pmatrix} \\;+\\; \\underbrace{\\begin{pmatrix}0\\\\ -\\,r(y_1)/m\\end{pmatrix}}_{G(Y)\\;=\\;\\text{parte não linear}}": {
+  "file": "eq_img/eq_1d732eb4d01c.png",
+  "w": 897.0,
+  "h": 187.0,
+  "display": true
+ },
+ "\\det(J-\\lambda I)=0": {
+  "file": "eq_img/eq_655f22294dfc.png",
+  "w": 283.0,
+  "h": 47.0,
+  "display": false
+ },
+ "\\det\\!\\begin{pmatrix}-\\lambda & 1\\\\ -\\omega^2 & -\\lambda\\end{pmatrix} = \\lambda^2 + \\omega^2 = 0 \\quad\\Longrightarrow\\quad \\lambda = \\pm\\, i\\,\\omega.": {
+  "file": "eq_img/eq_3c84c654e1bd.png",
+  "w": 969.7,
+  "h": 112.7,
+  "display": true
+ },
+ "\\dfrac{L}{\\sqrt{a^2+x^2}} \\le 1": {
+  "file": "eq_img/eq_a6afde718d22.png",
+  "w": 240.3,
+  "h": 98.3,
+  "display": false
+ },
+ "\\dfrac{\\lVert G(Y)\\rVert}{\\lVert Y\\rVert}\\ \\longrightarrow\\ 0 \\qquad\\text{quando}\\qquad Y\\to 0.": {
+  "file": "eq_img/eq_8a54c47dfbf3.png",
+  "w": 752.0,
+  "h": 110.7,
+  "display": true
+ },
+ "\\dfrac{dE}{dt}=v\\,\\big(m x'' + f(x)\\big)=0.": {
+  "file": "eq_img/eq_8602b5f4ae70.png",
+  "w": 511.0,
+  "h": 97.3,
+  "display": true
+ },
+ "\\frac{d}{dt}\\!\\left(\\omega^2 y_1^2 + y_2^2\\right)=0": {
+  "file": "eq_img/eq_c15566ce8673.png",
+  "w": 310.0,
+  "h": 55.7,
+  "display": false
+ },
+ "\\lambda": {
+  "file": "eq_img/eq_c6a6eb61fd9c.png",
+  "w": 27.3,
+  "h": 35.0,
+  "display": false
+ },
+ "\\lambda=0": {
+  "file": "eq_img/eq_eafdd30d8534.png",
+  "w": 100.3,
+  "h": 35.7,
+  "display": false
+ },
+ "\\lambda=\\pm i\\omega": {
+  "file": "eq_img/eq_c0d32f594340.png",
+  "w": 151.0,
+  "h": 35.0,
+  "display": false
+ },
+ "\\lambda=i\\omega": {
+  "file": "eq_img/eq_72ca356b8804.png",
+  "w": 119.7,
+  "h": 35.0,
+  "display": false
+ },
+ "\\lambda_{1,2} = \\pm\\, i\\,\\omega, \\qquad \\omega=\\sqrt{\\dfrac{2kh}{m(L+h)}}\\ >\\ 0 \\quad(h>0).": {
+  "file": "eq_img/eq_3e157f2906ba.png",
+  "w": 951.0,
+  "h": 132.3,
+  "display": true
+ },
+ "\\omega=0": {
+  "file": "eq_img/eq_3727c0529ba4.png",
+  "w": 104.7,
+  "h": 34.3,
+  "display": false
+ },
+ "\\omega^2=\\dfrac{f'(0)}{m}=\\dfrac{2kh}{m(L+h)}": {
+  "file": "eq_img/eq_c407dcee123f.png",
+  "w": 420.0,
+  "h": 101.7,
+  "display": false
+ },
+ "\\operatorname{Re}\\lambda = 0": {
+  "file": "eq_img/eq_b3997e59dc72.png",
+  "w": 154.7,
+  "h": 35.7,
+  "display": false
+ },
+ "\\operatorname{Re}\\lambda=0": {
+  "file": "eq_img/eq_e897b833c4da.png",
+  "w": 154.7,
+  "h": 35.7,
+  "display": false
+ },
+ "\\operatorname{Re}\\lambda\\neq 0": {
+  "file": "eq_img/eq_29f0dfe60a79.png",
+  "w": 154.7,
+  "h": 44.0,
+  "display": false
+ },
+ "\\pm i": {
+  "file": "eq_img/eq_36589c0963bd.png",
+  "w": 48.0,
+  "h": 33.7,
+  "display": false
+ },
+ "\\pm i\\omega,\\ \\ \\omega^2=\\frac{2kh}{m(L+h)}": {
+  "file": "eq_img/eq_d32de2abb309.png",
+  "w": 317.7,
+  "h": 62.3,
+  "display": false
+ },
+ "\\propto 1/A": {
+  "file": "eq_img/eq_a693318ce732.png",
+  "w": 116.0,
+  "h": 47.0,
+  "display": false
+ },
+ "\\rightarrow": {
+  "file": "eq_img/eq_0a183ed5142c.png",
+  "w": 42.7,
+  "h": 27.7,
+  "display": false
+ },
+ "\\sqrt{a^2+x^2}\\ \\ge\\ a = L+h\\ \\ge\\ L": {
+  "file": "eq_img/eq_7270b803aad7.png",
+  "w": 508.7,
+  "h": 47.7,
+  "display": false
+ },
+ "\\tfrac{f'(0)}{2}x^2": {
+  "file": "eq_img/eq_c62683d8c057.png",
+  "w": 107.3,
+  "h": 63.3,
+  "display": false
+ },
+ "a=L+h": {
+  "file": "eq_img/eq_855710bf79d1.png",
+  "w": 178.7,
+  "h": 37.7,
+  "display": false
+ },
+ "e^{i\\omega t}v": {
+  "file": "eq_img/eq_875c7368c6f9.png",
+  "w": 83.0,
+  "h": 40.0,
+  "display": false
+ },
+ "f": {
+  "file": "eq_img/eq_8fa14cdd754f.png",
+  "w": 26.7,
+  "h": 43.0,
+  "display": false
+ },
+ "f(x)=0 \\iff x=0 \\qquad\\Longrightarrow\\qquad \\text{equilíbrio em } (y_1,y_2)=(0,0).": {
+  "file": "eq_img/eq_68ec4fbe44f3.png",
+  "w": 1235.3,
+  "h": 50.7,
+  "display": true
+ },
+ "f(x)=2kx\\left(1-\\dfrac{L}{\\sqrt{a^2+x^2}}\\right),\\qquad m x'' + f(x)=0.": {
+  "file": "eq_img/eq_720002cd7c5d.png",
+  "w": 979.7,
+  "h": 112.7,
+  "display": true
+ },
+ "f(x)=\\underbrace{\\dfrac{2kh}{a}}_{f'(0)}\\,x \\;+\\; \\underbrace{\\dfrac{kL}{a^3}}_{\\text{cúbico}}\\,x^3 + O(x^5).": {
+  "file": "eq_img/eq_f4dafe7cb0dc.png",
+  "w": 650.3,
+  "h": 165.0,
+  "display": true
+ },
+ "f(x)=f'(0)\\,x + r(x)": {
+  "file": "eq_img/eq_2c5fc840c1bb.png",
+  "w": 368.7,
+  "h": 47.3,
+  "display": false
+ },
+ "h=0": {
+  "file": "eq_img/eq_2ba1b3acb05d.png",
+  "w": 100.0,
+  "h": 35.3,
+  "display": false
+ },
+ "h>0": {
+  "file": "eq_img/eq_e07d10581add.png",
+  "w": 100.0,
+  "h": 36.0,
+  "display": false
+ },
+ "h\\to 0": {
+  "file": "eq_img/eq_abc9a2acb046.png",
+  "w": 108.7,
+  "h": 35.3,
+  "display": false
+ },
+ "m x'' + \\dfrac{k}{L^2}\\,x^3 = 0,": {
+  "file": "eq_img/eq_fb90a6a03d00.png",
+  "w": 341.0,
+  "h": 97.0,
+  "display": true
+ },
+ "r": {
+  "file": "eq_img/eq_4b43b0aee356.png",
+  "w": 23.3,
+  "h": 24.7,
+  "display": false
+ },
+ "r' = \\alpha\\, r^3, \\qquad \\theta' = 1.": {
+  "file": "eq_img/eq_6c66d4927271.png",
+  "w": 400.3,
+  "h": 54.7,
+  "display": true
+ },
+ "r(x)=O(x^3)": {
+  "file": "eq_img/eq_c04c5b4953be.png",
+  "w": 230.3,
+  "h": 50.3,
+  "display": false
+ },
+ "r^2=x^2+y^2": {
+  "file": "eq_img/eq_c0c23ae55539.png",
+  "w": 216.0,
+  "h": 48.0,
+  "display": false
+ },
+ "u=x^2/a^2": {
+  "file": "eq_img/eq_3b079fd998f3.png",
+  "w": 175.0,
+  "h": 50.0,
+  "display": false
+ },
+ "v=(1,\\,i\\omega)": {
+  "file": "eq_img/eq_811f63dcc549.png",
+  "w": 192.3,
+  "h": 47.0,
+  "display": false
+ },
+ "v_0\\neq 0": {
+  "file": "eq_img/eq_8bc6eabe14ce.png",
+  "w": 113.3,
+  "h": 44.0,
+  "display": false
+ },
+ "x' = -\\,y + \\alpha\\,x\\,(x^2+y^2), \\qquad y' = x + \\alpha\\,y\\,(x^2+y^2).": {
+  "file": "eq_img/eq_c78890f94a33.png",
+  "w": 983.7,
+  "h": 57.0,
+  "display": true
+ },
+ "x=0": {
+  "file": "eq_img/eq_e11729b0b65e.png",
+  "w": 100.0,
+  "h": 34.3,
+  "display": false
+ },
+ "x=A\\,u": {
+  "file": "eq_img/eq_0dedb895f219.png",
+  "w": 140.3,
+  "h": 35.7,
+  "display": false
+ },
+ "x^2": {
+  "file": "eq_img/eq_32f5240d0dbf.png",
+  "w": 41.0,
+  "h": 40.3,
+  "display": false
+ },
+ "y_1' = y_2, \\qquad\\qquad y_2' = -\\dfrac{1}{m}\\,f(y_1).": {
+  "file": "eq_img/eq_415c654d7190.png",
+  "w": 635.3,
+  "h": 96.3,
+  "display": true
+ },
+ "y_1'=y_2'=0": {
+  "file": "eq_img/eq_f308f3567d0b.png",
+  "w": 202.3,
+  "h": 47.7,
+  "display": false
+ },
+ "y_1(t)=y_1(0)+y_2(0)\\,t": {
+  "file": "eq_img/eq_25e0fefca34e.png",
+  "w": 383.0,
+  "h": 47.0,
+  "display": false
+ },
+ "y_1=x": {
+  "file": "eq_img/eq_bb6ee85d08b3.png",
+  "w": 116.0,
+  "h": 32.3,
+  "display": false
+ },
+ "y_2 = 0 \\qquad\\text{e}\\qquad f(y_1)=0.": {
+  "file": "eq_img/eq_f29fa5d6920b.png",
+  "w": 510.3,
+  "h": 50.7,
+  "display": true
+ },
+ "y_2=x'": {
+  "file": "eq_img/eq_17a8590f180a.png",
+  "w": 125.3,
+  "h": 45.3,
+  "display": false
+ }
+}
