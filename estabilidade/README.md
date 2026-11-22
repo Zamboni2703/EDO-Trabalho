@@ -9,7 +9,9 @@ Camilla foi alterado. A ideia é apresentar esta sequência logo após o slide "
 
 | Arquivo | O que é |
 |---|---|
-| **`Estabilidade_Joao.pdf`** | **Os slides prontos (17 páginas, 16:9).** É o que você apresenta. |
+| **`Estabilidade_Joao_imagens.pdf`** | **Versão para IMPORTAR NO CANVA** (17 páginas, cada slide como imagem única). Importa limpo, sem erros. **Use este no Canva.** |
+| `slides_png/` | Cada slide como PNG individual (2400×1350). Alternativa: arraste cada imagem como fundo de página no Canva. |
+| `Estabilidade_Joao.pdf` | Slides com texto/equações vetoriais (17 páginas, 16:9). Ótimo para apresentar direto, mas **não importe no Canva** — as equações viram centenas de fragmentos. |
 | `slides.html` | Fonte editável dos slides (HTML + CSS + KaTeX). |
 | `estilo.css` | Template visual (cores, fontes, rodapé) replicando o Canva da Camilla. |
 | `roteiro_fala.md` | Roteiro de fala slide a slide, com tempos (~30 min) e perguntas prováveis. |
@@ -37,6 +39,13 @@ Camilla foi alterado. A ideia é apresentar esta sequência logo após o slide "
 15. h = 0: o não linear manda (parte 2)
 16. Formulação final (tabela-resumo)
 17. Obrigado / dúvidas
+
+## Importar no Canva (sem erros)
+
+Importe **`Estabilidade_Joao_imagens.pdf`** (não o `Estabilidade_Joao.pdf`). Nessa versão
+cada slide é uma imagem única, então o Canva não tenta reinterpretar as equações como texto
+editável — que era o que gerava o emaranhado de "erros" na importação. O visual fica idêntico.
+Se preferir, use os PNGs de `slides_png/` como fundo de cada página.
 
 ## Como editar e regerar o PDF
 
