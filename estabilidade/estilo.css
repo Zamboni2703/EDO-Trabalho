@@ -1,0 +1,142 @@
+/* ============================================================
+   Estilo dos slides — parte Estabilidade (João)
+   Replica o template Canva da Camilla:
+   fundo creme, barra de titulo slate, Poppins (titulos) + Open Sans (corpo),
+   equacoes em serifa via KaTeX, rodape de tres faixas.
+   Slide: 1280 x 720 (16:9).
+   ============================================================ */
+
+/* ---- fontes locais (embutidas no PDF) ---- */
+@font-face{font-family:'Poppins';font-weight:400;font-style:normal;
+  src:url('fonts/Poppins-400-latin.woff2') format('woff2');}
+@font-face{font-family:'Poppins';font-weight:400;font-style:normal;unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+  src:url('fonts/Poppins-400-latinext.woff2') format('woff2');}
+@font-face{font-family:'Poppins';font-weight:700;font-style:normal;
+  src:url('fonts/Poppins-700-latin.woff2') format('woff2');}
+@font-face{font-family:'Poppins';font-weight:700;font-style:normal;unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+  src:url('fonts/Poppins-700-latinext.woff2') format('woff2');}
+@font-face{font-family:'Open Sans';font-weight:400 700;font-style:normal;
+  src:url('fonts/OpenSans-latin.woff2') format('woff2');}
+@font-face{font-family:'Open Sans';font-weight:400 700;font-style:normal;unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+  src:url('fonts/OpenSans-latinext.woff2') format('woff2');}
+
+:root{
+  --creme:#fffeec;
+  --slate:#5b6975;
+  --slate-escuro:#3a434c;
+  --azul-claro:#8fa2b4;
+  --bege:#e2e3d5;
+  --azul:#2a78d6;
+  --laranja:#e8622a;
+  --tinta:#2b2b2b;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html,body{background:#d9d9d9;}
+
+.slide{
+  position:relative;
+  width:1280px;height:720px;
+  background:var(--creme);
+  overflow:hidden;
+  font-family:'Open Sans','Noto Sans',sans-serif;
+  color:var(--tinta);
+  page-break-after:always;
+  break-after:page;
+}
+.slide:last-child{page-break-after:auto;break-after:auto;}
+
+/* ---- barra de titulo ---- */
+.topbar{
+  position:absolute;top:0;left:0;right:0;height:92px;
+  background:var(--slate);
+  display:flex;align-items:center;
+  padding:0 46px;
+}
+.topbar h1{
+  font-family:'Poppins',sans-serif;font-weight:700;
+  color:#fff;font-size:40px;line-height:1.05;
+}
+
+/* ---- corpo ---- */
+.corpo{
+  position:absolute;top:92px;left:0;right:0;bottom:46px;
+  padding:34px 54px 10px 54px;
+}
+
+/* ---- rodape de tres faixas ---- */
+.rodape{
+  position:absolute;left:0;right:0;bottom:0;height:46px;
+  display:grid;grid-template-columns:1fr 1.25fr 1fr;
+  font-family:'Poppins',sans-serif;font-size:17px;color:#fff;
+}
+.rodape .f1{background:var(--azul-claro);display:flex;align-items:center;justify-content:center;font-weight:600;}
+.rodape .f2{background:var(--slate);display:flex;align-items:center;justify-content:center;}
+.rodape .f3{background:var(--slate-escuro);display:flex;align-items:center;justify-content:flex-end;padding-right:40px;}
+
+/* ---- tipografia de corpo ---- */
+.corpo p{font-size:25px;line-height:1.45;margin-bottom:16px;}
+.corpo p.sub{font-size:22px;color:#444;}
+ul{list-style:none;}
+ul li{font-size:24px;line-height:1.5;margin-bottom:14px;padding-left:34px;position:relative;}
+ul li::before{content:"";position:absolute;left:4px;top:11px;width:11px;height:11px;border-radius:50%;background:var(--slate);}
+ul li.laranja::before{background:var(--laranja);}
+ul li.azul::before{background:var(--azul);}
+
+.center{text-align:center;}
+.eq-grande{margin:22px 0;text-align:center;}
+.destaque-row{display:flex;gap:34px;justify-content:center;align-items:center;flex-wrap:wrap;margin:14px 0;}
+
+/* ---- caixa de destaque (igual "Equação Linearizada") ---- */
+.caixa{
+  border:3px solid var(--azul-claro);border-radius:28px;
+  margin:18px auto 0;max-width:1040px;overflow:hidden;background:transparent;
+}
+.caixa .cab{
+  background:var(--azul-claro);color:#fff;
+  font-family:'Poppins',sans-serif;font-weight:600;font-size:24px;
+  padding:9px 26px;
+}
+.caixa .conteudo{padding:20px 26px;text-align:center;}
+
+/* ---- slide divisor de secao (fundo azul/cinza inteiro) ---- */
+.slide.secao{background:var(--slate);}
+.slide.secao .titulo-secao{
+  position:absolute;top:150px;left:70px;
+  font-family:'Poppins',sans-serif;font-weight:700;color:#fff;font-size:70px;
+}
+.slide.secao .rodape .f1{background:var(--azul-claro);}
+.slide.secao .rodape .f3{background:var(--slate-escuro);}
+
+/* ---- figuras ---- */
+.fig{display:block;margin:6px auto;}
+.fig-row{display:flex;gap:26px;justify-content:center;align-items:center;}
+.legenda{font-size:19px;color:#555;text-align:center;margin-top:6px;}
+
+/* ---- tabela resumo ---- */
+table.resumo{border-collapse:collapse;margin:14px auto;font-size:22px;}
+table.resumo th,table.resumo td{border:2px solid var(--slate);padding:10px 20px;text-align:center;}
+table.resumo th{background:var(--slate);color:#fff;font-family:'Poppins',sans-serif;font-weight:600;}
+table.resumo td.ok{color:#1f7a3a;font-weight:700;}
+table.resumo td.no{color:var(--laranja);font-weight:700;}
+
+/* layout com figura ao lado do texto */
+.cols{display:flex;gap:30px;align-items:center;}
+.cols .txt{flex:1;}
+.cols .img{flex:0 0 auto;}
+
+.katex{font-size:1.06em;}
+.eq-grande .katex-display{margin:0;}
+.eq-grande .katex{font-size:1.3em;}
+.eq-grande.small .katex{font-size:1.1em;}
+h2.subt{font-family:'Poppins',sans-serif;font-weight:600;font-size:26px;color:var(--slate);margin-bottom:10px;}
+
+/* ---- impressao: 1 slide por pagina, 16:9 exato (1280x720 px = 13.333in x 7.5in) ---- */
+@page{ size:1280px 720px; margin:0; }
+@media print{
+  html,body{background:#fff;}
+  .slide{ margin:0; box-shadow:none; }
+}
+
+.seta{color:var(--slate);font-weight:700;font-size:1.15em;padding:0 2px;}
